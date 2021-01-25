@@ -1,86 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_vertical_margin"
-    tools:context=".Login"
-    android:orientation="vertical">
-    <LinearLayout
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/background"
-        android:padding="15dp"
-        android:gravity="center">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LAUNDRY SAHABAT"
-            android:textSize="25dp"
-            android:fontFamily="@font/t15"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:textAlignment="center"/>
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/room"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20dp"
-            android:fontFamily="@font/t15"
-            android:textColor="@color/teal_700"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginTop="-21dp"
-            android:layout_marginBottom="50dp"/>
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:padding="20dp"
-            android:background="@drawable/input"
-            android:layout_marginHorizontal="20dp"/>
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:padding="20dp"
-            android:background="@drawable/input"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="10dp"
-            android:inputType="textPassword"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="50dp"
-            android:layout_marginHorizontal="10dp">
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Masuk"/>
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reset"/>
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/nav_item_foreground"
+        app:itemTextColor="@color/nav_item_foreground"
+        app:menu="@menu/navigation" />
+
+</android.support.design.widget.CoordinatorLayout>
