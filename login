@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:fitsSystemWindows="true">
 
-    <FrameLayout
-        android:id="@+id/frame_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+         />
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@color/nav_item_foreground"
-        app:itemTextColor="@color/nav_item_foreground"
-        app:menu="@menu/navigation" />
+    <Button
+        android:id="@+id/button_pelanggan"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:onClick="Pelanggan"
+        android:text="@string/login_pelanggan" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/button_pegawai"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:onClick="Pegawai"
+        android:text="@string/login_pegawai" />
+</LinearLayout>
